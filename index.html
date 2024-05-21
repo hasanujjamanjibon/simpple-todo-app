@@ -7,8 +7,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
     <title>Todo-App</title>
   </head>
   <body>
@@ -23,21 +30,26 @@
           Simple Todo App
         </p>
         <div
-          class="bg-white py-2 rounded-full flex justify-center items-center px-2"
+          class="bg-white py-2 min-w-96 rounded-full flex justify-center items-center px-2"
         >
           <input
+            id="taskEl"
             type="text"
             class="flex-1 px-4 bg-transparent focus:outline-none"
             placeholder="write something"
           />
-          <button class="cursor-pointer">
+          <button id="addTask" class="cursor-pointer">
             <img class="h-10" src="./img/plus.png" alt="" />
           </button>
         </div>
         <div
-          class="py-4 px-2 max-w-2xl max-h-[500px] overflow-y-auto space-y-2 bg-white rounded-xl"
+          id="taskContainer"
+          class="py-4 px-2 max-w-2xl h-[500px] overflow-y-auto space-y-2 bg-white rounded-xl"
         >
-          <div
+          <p id="textWarning" class="text-red-600 font-semibold text-xl text-center">
+            No Data Available
+          </p>
+          <!-- <div
             class="bg-white p-3 drop-shadow-xl rounded-md flex justify-center items-center"
           >
             <p class="flex-1 pe-4">
@@ -54,10 +66,14 @@
               Doloremque, eveniet.
             </p>
             <img src="./img/delete.png" class="h-6" alt="" />
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
     <script src="./script.js"></script>
   </body>
 </html>
