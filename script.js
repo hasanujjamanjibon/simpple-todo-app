@@ -33,10 +33,11 @@ addTask.addEventListener("click", () => {
       </div>
     `;
 
-  return Toastify({
+  Toastify({
     text: "Thank You for adding",
     duration: 900,
   }).showToast();
+  taskEl.value = "";
 });
 
 // Event delegation for delete button clicks
